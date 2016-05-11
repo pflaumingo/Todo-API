@@ -2,8 +2,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 <<<<<<< HEAD
 var _ = require('underscore');
-=======
->>>>>>> 747e628a9593320cfa9fcf3686f5ae937b25150c
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -13,7 +11,6 @@ var todoNextId = 1;
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-<<<<<<< HEAD
 	res.send('Todo API Root');
 });
 
@@ -56,24 +53,6 @@ app.listen(PORT, function () {
 	console.log('Express listening on port ' + PORT + '!');
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
     res.send('Todo API root');
 });
 
@@ -111,4 +90,3 @@ app.post('/todos', function (req, res) {
 app.listen(PORT, function() {
     console.log('Express listening on port ' + PORT + '!');
 });
->>>>>>> 747e628a9593320cfa9fcf3686f5ae937b25150c

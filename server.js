@@ -57,7 +57,7 @@ app.delete('/todos/:id', function (req, res) {
         todos = _.without(todos, matchedTodo);
         res.json(matchedTodo);
     }
-})
+});
 
 app.listen(PORT, function () {
 	console.log('Express listening on port ' + PORT + '!');

@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-<<<<<<< HEAD
 var _ = require('underscore');
 
 var app = express();

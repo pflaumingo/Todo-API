@@ -19,8 +19,10 @@ var grades = [67, 80];
 
 var app = function addGrades (grades) {
     grades.push(55);
+    return grades;
 };
 
-app(grades);
+var test = app(grades);
+
 //addGrades(grades);
-console.log(grades);
+console.log(test);

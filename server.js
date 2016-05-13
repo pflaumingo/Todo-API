@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 // GET /todos
 app.get('/todos', function (req, res) {
 	var query = req.query;
-    var where = {}
+    var where = {};
     
     if (query.hasOwnProperty('completed') && query.completed === 'true') {
         where.completed = true;
@@ -31,7 +31,9 @@ app.get('/todos', function (req, res) {
         };
     }
     
-    db.todo.findAll({where: where}).then(function (todos) {
+    db.todo.findAll({
+        where: where
+    }).then(function (todos) {
         res.json(todos);
     }, function (e) {
         res.status(500).send();
@@ -81,7 +83,7 @@ app.delete('/todos/:id', function (req, res) {
         }
     }, function () {
         res.status(500).send();
-    })
+    });
 });
 
 app.put('/todos/:id', function(req, res) {
@@ -126,4 +128,4 @@ db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         console.log('Express listening on port ' + PORT + '!');
     });    
-})
+});
